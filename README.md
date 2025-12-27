@@ -4,10 +4,9 @@ This repository serves as the "Engine Room" for the [Collatz Multiverse](https:/
 
 ---
 
-## Included Tool:
-* **[Deep Search Python Engine](Deep-Search.py):**
+## Included Tool: *[Deep Search Python Engine](Deep-Search.py):*
 
-    A high-performance terminal tool designed for massive integers.
+A high-performance terminal tool designed for massive integers.
 
 * Utilizes Python's arbitrary-precision integers with a 1,000,000 digit string limit.
 * Cycle Detection: Implements a hashed `seen` set for loop detection.
@@ -25,7 +24,7 @@ Follow these steps to run the project locally:
 
 # 1. Clone the repository and enter:
 ```bash
-git clone https://github.com/saifkayyali3/Collatz-Research.git
+git clone https://github.com/saifkayyali3/Collatz_Research.git
 cd Collatz_Research
 ```
 # 2. Make a virtual environment
