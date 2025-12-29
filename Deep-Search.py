@@ -50,6 +50,7 @@ try:
     q=int(input("Enter the 'q' value for the qn+r conjecture : "))
     r=int(input("Enter the 'r' value for the qn+r conjecture : "))
     start_n = input(f"Enter an integer to test the {q}n+{r} conjecture:")
+    bit=int(input("Enter the maximum number of bits allowed for each number: \n(If you don't know how many bits the max number of digits you want to allow is,\n use the Bits.py tool then come back and enter)\n"))
 except ValueError:
     print("Error: Please enter valid integers only.")
     input("Press Enter to exit...")
@@ -86,9 +87,8 @@ while (n != 1 or continue_after_one) and steps < limit:
         n //= 2
     else:
         n = q * n + r
-    
-    if n.bit_length() > 3322: # If it exceeds 1000 digits, it's probably diverging
-        print(f"DIVERGENCE LIKELY: Value exceeded 1000 digits at step {steps}.")
+    if n.bit_length() > bit: 
+        print(f"DIVERGENCE LIKELY: Value exceeded {bit} bits at step {steps}.")
         break
     if n in seen:
         print(f"\nLOOP DETECTED at step {steps}!")
@@ -103,9 +103,16 @@ while (n != 1 or continue_after_one) and steps < limit:
                 curr = q * curr + r
            if curr == n: # We've come full circle
                 break
-        print(f"Full loop cycle: {loop_members}")
+        pos_number=[num for num in loop_members if num>0]
+        if pos_number:
+            min_digits = min(num.bit_length() for num in pos_number)
+            candidates = [num for num in pos_number if num.bit_length() == min_digits]
+            loop_name=min(candidates)
+        else:
+            loop_name=min(loop_members)
+        print(f"Full loop cycle: {loop_members}" if len(loop_members) < 100 else "Loop cycle too long to display.")
         print(f"Cycle length: {len(loop_members)}")
-        
+        print(f"This is the {loop_name} loop.")
         break
     seen.add(n)
     
@@ -119,8 +126,8 @@ if n == 1 and not continue_after_one:
 elif steps >= limit:
     print(f"LIMIT REACHED: Stopped after {steps} steps..")
     print(f"Last value: {n} ({len(str(n))} digits)")
-    
-elif n.bit_length() > 3322:
+
+elif n.bit_length() > bit:
     print(f"STOPPED: Divergence detected at {len(str(n))} digits.")
 else:
     print(f"LIMIT REACHED: Stopped after {steps} steps.")
