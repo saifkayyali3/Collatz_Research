@@ -1,7 +1,7 @@
 # The $qn+r$ Research Lab
 
 ## Mathematical Analysis and High-Precision Deep Searching
-This repository serves as the Engine Room for the [Collatz Multiverse](https://github.com/saifkayyali3/Collatz_Multiverse) and [Collatz Standard](https://github.com/saifkayyali3/CollatzStandard) projects. While the main applications focus on visualization, this lab is dedicated to stress-testing conjectures, identifying loops, and mapping the limits of numerical stability.
+This repository serves as the Engine Room for the **[Collatz Multiverse](https://github.com/Skayyali3/Collatz_Multiverse)** and **[Collatz Standard](https://github.com/Skayyali3/CollatzStandard)** projects. While the main applications focus on visualization, this lab is dedicated to stress-testing conjectures, identifying loops, and mapping the limits of numerical stability.
 
 ---
 
@@ -36,7 +36,7 @@ A side terminal tool that converts numbers to bits for user input in the main en
 ---
 
 ## Research Documentation:
-#### Core Findings are in the [Research File](RESEARCH.md)
+### Core Findings are in the [Research File](RESEARCH.md)
 ### Key Discoveries:
 * The Precision Cliff: Why standard floating-point math fails for numbers like ($10^{67}$)
 * $3n-1$ Mirroring: Proof of the symmetry between $3n-1$ (positive) and $3n+1$ (negative)
@@ -47,7 +47,7 @@ Follow these steps to run the project locally:
 
 ### 1: Clone the repository and enter:
 ```bash
-git clone https://github.com/saifkayyali3/Collatz_Research.git
+git clone https://github.com/Skayyali3/Collatz_Research.git
 cd Collatz_Research
 ```
 ### 2: Make a virtual environment
@@ -59,23 +59,23 @@ venv\Scripts\activate # Windows
 ```
 
 ### 3 To:
-### -a: Run the Deep Search Python Engine:
+#### -a: Run the Deep Search Python Engine:
 ```bash
 python Deep-Search.py
 
 ```
-### -b Run  the Million Tester Python Engine:
+#### -b Run  the Million Tester Python Engine:
 ```bash
 python Million-Test.py
 
 ```
 
-### -c Run the Titan Hunter Python Engine:
+#### -c Run the Titan Hunter Python Engine:
 ```bash
 python Titan-Hunter.py
 
 ```
-### -d Run the Number to Bits Converter:
+#### -d Run the Number to Bits Converter:
 ```bash
 python Bits.py
 
@@ -83,7 +83,7 @@ python Bits.py
 
 ## License
 
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License – see the **[LICENSE](LICENSE)** file for details.
 
 ## Author
 **Saif Kayyali**
