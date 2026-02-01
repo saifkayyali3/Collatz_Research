@@ -27,7 +27,7 @@ An efficient terminal tool designed to test random 1,000 digit numbers (positive
 
 * Utilizes Python's `random` library to randomize 1,000 digit numbers to be used as the value n within the $qn+r$ conjecture 
 
-* Converts loops to .txt files if any number in them is above one million as displaying them on the CLI would take more time
+* Converts loops to text files if any number in them is above one million as displaying them on the CLI could cause unwanted and laggy behaviour (Safety fallback).
 
 ### 4: *[The Number to Bit Converter](Bits.py):*
 
@@ -50,35 +50,24 @@ Follow these steps to run the project locally:
 git clone https://github.com/Skayyali3/Collatz_Research.git
 cd Collatz_Research
 ```
-### 2: Make a virtual environment
-```bash
-python -m venv venv
 
-source venv/bin/activate # Linux/macOS
-venv\Scripts\activate # Windows
-```
-
-### 3 To:
+### 2 To:
 #### -a: Run the Deep Search Python Engine:
 ```bash
 python Deep-Search.py
-
 ```
 #### -b Run  the Million Tester Python Engine:
 ```bash
 python Million-Test.py
-
 ```
 
 #### -c Run the Titan Hunter Python Engine:
 ```bash
 python Titan-Hunter.py
-
 ```
 #### -d Run the Number to Bits Converter:
 ```bash
 python Bits.py
-
 ```
 
 ## License
